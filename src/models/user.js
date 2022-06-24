@@ -6,9 +6,7 @@ const userSchema = new mongoose.Schema({
     },
     age: {
         type: Number,
-    }
-    //hola
-    ,
+    },
     birthday: {
         type: String,
     },
@@ -37,6 +35,7 @@ const userSchema = new mongoose.Schema({
     },
     genderInt: {
         type: String,
+        enum: ['male','female','both']
     },
     description: {
         type: String,
