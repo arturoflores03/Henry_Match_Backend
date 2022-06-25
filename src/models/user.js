@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
     },
-    sub: {
+    idAuth0: {
         type: String,
         unique: true
     },
