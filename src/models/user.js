@@ -21,13 +21,14 @@ const userSchema = new mongoose.Schema({
         type: String,       
         
     },
+    
     premium: {
         type: Boolean,
         default: false        
     },
     active: {
         type: Boolean,
-        default: false,        
+        default: true,        
     },
     image: {
         type: String,        
