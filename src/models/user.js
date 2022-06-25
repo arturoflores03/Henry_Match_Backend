@@ -6,7 +6,6 @@ const userSchema = new mongoose.Schema({
     },
     idAuth0: {
         type: String,
-        unique: true
     },
     age: {
         type: Number,
