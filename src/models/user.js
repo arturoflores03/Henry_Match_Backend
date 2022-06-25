@@ -4,6 +4,10 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
     },
+    sub: {
+        type: String,
+        unique: true
+    },
     age: {
         type: Number,
     },
@@ -14,9 +18,8 @@ const userSchema = new mongoose.Schema({
         type: String,     
     },
     email: {
-        type: String,
-        required: true,
-        unique: true
+        type: String,       
+        
     },
     premium: {
         type: Boolean,
