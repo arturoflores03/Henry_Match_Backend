@@ -11,12 +11,12 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     nickname: {
-        type: String,
-        unique: true
+        type: String,     
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     premium: {
         type: Boolean,
