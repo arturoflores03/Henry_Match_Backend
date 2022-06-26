@@ -13,7 +13,8 @@ const userSchema = new mongoose.Schema({
     nickname: {
         type: String,
         require: true,
-        index: {unique: true},
+        sparse: true,
+        unique: true,
         dropDups: true
     },
     email: {
