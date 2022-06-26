@@ -42,9 +42,7 @@ const options = {
 }
 
 mongoose
-    .connect(MONGODB_URI, options, {
-        useNewUrlParser:true
-    })
+    .connect(MONGODB_URI, options)
     .then(() => console.log("Connected to MongoDB Atlas"))
     .catch((error) => console.error(error))
 
