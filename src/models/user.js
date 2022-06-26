@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'pi','pf','graduate']
     },
-    likeRecieved:{
+    likeReceived:{
         type: [String]
     },
     likeGiven:{
