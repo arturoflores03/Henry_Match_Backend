@@ -27,14 +27,10 @@ const mongoose = require("mongoose");
 const {MONGODB_URI, PORT} = process.env;
 const server = require('./src/app.js');
 
-const options = {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  autoIndex: true, 
-}
 
 mongoose
-    .connect(MONGODB_URI, options)
+    .connect(MONGODB_URI, {
+    useNewUrlParser:true})
     .then(() => console.log("Connected to MongoDB Atlas"))
     .catch((error) => console.error(error))
 
