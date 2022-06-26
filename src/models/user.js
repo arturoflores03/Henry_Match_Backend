@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
         unique: true,
+        dropDups: true,
     },
     email: {
         type: String,       
