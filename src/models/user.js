@@ -4,9 +4,6 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
     },
-    idAuth0: {
-        type: String,
-    },
     age: {
         type: Number,
     },
@@ -15,6 +12,7 @@ const userSchema = new mongoose.Schema({
     },
     nickname: {
         type: String,
+        require: true,
         unique: true
     },
     email: {
@@ -45,7 +43,7 @@ const userSchema = new mongoose.Schema({
     },
     henryLevel: {
         type: String,
-        enum: ['m1', 'm2', 'm3', 'm4',"pi","pf",'graduate']
+        enum: ['m1', 'm2', 'm3', 'm4', 'm5, 'm6', 'pi','pf','graduate']
     },
     likeRecieved:{
         type: [String]
@@ -56,6 +54,17 @@ const userSchema = new mongoose.Schema({
     matches: {
         type: [String],
     },
+     city: {
+    type: String,
+    },
+
+    job: {
+    type: String,
+    },
+    career: {
+    type: String,
+    enum: ["fullstack", "datascience"],
+    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -63,7 +72,10 @@ const userSchema = new mongoose.Schema({
     updatedAt: {
         type: Date,
         default: Date.now
-    }
+    },
+    interests: {
+        type: [String],
+    },
 
 })
 
