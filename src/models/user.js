@@ -13,9 +13,8 @@ const userSchema = new Schema({
     nickname: {
         type: String,
         require: true,
-        sparse: true,
-        unique: true,
-        dropDups: true
+        index: true,
+        unique: true 
     },
     email: {
         type: String,       
