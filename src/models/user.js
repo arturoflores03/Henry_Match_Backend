@@ -1,6 +1,7 @@
-const { Schema, model } = require('mongoose')
 
-const userSchema = new Schema({
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
     },
@@ -79,6 +80,8 @@ const userSchema = new Schema({
         enum: ["moda", "artes marciales", "fiestas", "videojuegos", "deportes", "cine", "viajes", "lectura", "programar"],
     },
 
-})
+});
+
 
 module.exports = model('Users', userSchema)
+

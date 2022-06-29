@@ -7,6 +7,7 @@ const userPut = (req, res) =>{
 
     userSchema
         .updateOne({_id:id},{ $set: {name, age, birthday, nickname,premium,active, email, image, genderInt, gender, description, henryLevel, likeReceived, likeGiven, matches}})
+
         .then(data => res.json(data))
         .catch((error) => res.json({message:error}));
 }
