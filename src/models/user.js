@@ -53,6 +53,9 @@ const userSchema = new mongoose.Schema({
     likeGiven:{
         type: [String]
     },
+    dislike:{
+        type: [String]
+    },
     matches: {
         type: [String],
     },
