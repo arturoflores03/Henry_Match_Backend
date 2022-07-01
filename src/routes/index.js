@@ -28,7 +28,7 @@ router.get('/interests', interestsGet);
 router.put('/interests/:id', interestsPut);
 router.get('/interests/:id', interestsId);
 router.delete('/interests/:id', interestsDelete);
-router.put('/usersMatches/:id', putMatches);
+router.post('/usersMatches/:id', putMatches);
 
 
 

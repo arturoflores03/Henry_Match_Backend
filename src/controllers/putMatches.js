@@ -6,7 +6,7 @@ const putMatches = (req, res) =>{
     const {dislike, likeReceived, likeGiven, matches} = req.body
 
     userSchema
-        .findOneAndUpdate({_id:id},{dislike, likeReceived, likeGiven, matches})
+        .create({_id:id},{dislike, likeReceived, likeGiven, matches})
 
         .then(data => res.json(data))
         .catch((error) => res.json({message:error}));
