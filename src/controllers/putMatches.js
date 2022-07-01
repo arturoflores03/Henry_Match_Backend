@@ -1,7 +1,7 @@
 const userSchema = require("../models/user");
 
 
-const userPut = (req, res) =>{
+const putMatches = (req, res) =>{
     const {id} = req.params;
     const {dislike, likeReceived, likeGiven, matches} = req.body
 
@@ -13,5 +13,5 @@ const userPut = (req, res) =>{
 }
 
 module.exports = {
-    userPut
+    putMatches
 };

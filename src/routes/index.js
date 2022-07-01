@@ -10,6 +10,8 @@ const { interestsPut } = require('../controllers/interestsPut');
 const { interestsId } = require('../controllers/interestsId');
 const { interestsDelete } = require('../controllers/interestsDelete');
 const { userNickname } = require('../controllers/userNickname');
+const { putMatches } = require('../controllers/putMatches');
+
 
 
 
@@ -26,6 +28,7 @@ router.get('/interests', interestsGet);
 router.put('/interests/:id', interestsPut);
 router.get('/interests/:id', interestsId);
 router.delete('/interests/:id', interestsDelete);
+router.post('/usersMatches', putMatches);
 
 
 
