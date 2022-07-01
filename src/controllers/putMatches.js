@@ -6,7 +6,7 @@ const putMatches = (req, res) =>{
     const {dislike, likeReceived, likeGiven, matches} = req.body
 
     userSchema
-        .updateOne({_id:id},{ $push: {likeGiven: likeGiven}, {matches: matches}, {dislike: dislike}, {likeReceived: likeReceived})
+        .updateOne({_id:id},{ $push: {likeGiven: likeGiven}})
 
         .then(data => res.json(data))
         .catch((error) => res.json({message:error}));
