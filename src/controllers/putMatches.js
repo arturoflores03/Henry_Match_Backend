@@ -2,7 +2,7 @@ const userSchema = require("../models/user");
 
 
 const putMatches = (req, res) =>{
-    const {id} = req.params;
+    const {id} = req.body;
     const {dislike, likeReceived, likeGiven, matches} = req.body
 
     userSchema
