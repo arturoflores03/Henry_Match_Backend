@@ -6,7 +6,7 @@ const userPut = (req, res) =>{
     const {name, age, birthday, nickname,premium,active, email, image, genderInt, gender, dislike, description, henryLevel, likeReceived, likeGiven, matches} = req.body
 
     userSchema
-        .save({_id:id},{ $set: {name, age, birthday, nickname,premium,active, email, image, genderInt, gender, dislike, description, henryLevel, likeReceived, likeGiven, matches}})
+        .updateOne({_id:id},{ $set: {name, age, birthday, nickname,premium,active, email, image, genderInt, gender, dislike, description, henryLevel, likeReceived, likeGiven, matches}})
 
         .then(data => res.json(data))
         .catch((error) => res.json({message:error}));
