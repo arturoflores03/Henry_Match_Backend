@@ -13,4 +13,4 @@ const putMatches = (req, res) =>{
 }
 
 module.exports = {
-    putMatches
+    putMatches}
