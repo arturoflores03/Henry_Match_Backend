@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
         default: true,        
     },
     image: {
-        type: String,        
+        type: [String],        
     },
     gender: {
         type: String,
@@ -46,6 +46,9 @@ const userSchema = new mongoose.Schema({
     henryLevel: {
         type: String,
         enum: ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'pi','pf','graduate']
+    },
+     dislikeReceived:{
+        type: [String]
     },
     likeReceived:{
         type: [String]
