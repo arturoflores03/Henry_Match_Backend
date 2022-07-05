@@ -21,14 +21,13 @@ const userSchema = new mongoose.Schema({
         type: String,       
         
     },
-    
-    premium: {
-        type: Boolean,
-        default: false        
-    },
     active: {
         type: Boolean,
         default: true,        
+    },
+    role:{
+        type: String,
+        enum:["user", "admin", "premium", "banned"]
     },
     image: {
         type: [String],        
