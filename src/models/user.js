@@ -64,6 +64,12 @@ const userSchema = new mongoose.Schema({
      city: {
     type: String,
     },
+    message: {
+        type: String,
+    },
+    review: {
+        type: String,
+    },
 
     job: {
     type: String,
