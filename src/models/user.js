@@ -88,7 +88,6 @@ const userSchema = new mongoose.Schema({
     },
     interests: {
         type: [String],
-        enum: ["moda", "artes marciales", "fiestas", "videojuegos", "deportes", "cine", "viajes", "lectura", "programar"],
     },
 
 });
