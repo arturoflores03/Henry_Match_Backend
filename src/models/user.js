@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
         enum:["user", "admin", "premium", "banned"]
     },
     image: {
-        type: [String],        
+        type: String,        
     },
     gender: {
         type: String,
