@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'pi','pf','graduate']
     },
-     dislikeReceived:{
+    dislikeReceived:{
         type: [String]
     },
     likeReceived:{
@@ -66,8 +66,8 @@ const userSchema = new mongoose.Schema({
     matches: {
         type: [String],
     },
-     city: {
-    type: String,
+    city: {
+        type: String,
     },
     message: {
         type: String,
@@ -77,11 +77,11 @@ const userSchema = new mongoose.Schema({
     },
 
     job: {
-    type: String,
+        type: String,
     },
     career: {
-    type: String,
-    enum: ["fullstack", "datascience"],
+        type: String,
+        enum: ["fullstack", "datascience"],
     },
     createdAt: {
         type: Date,
