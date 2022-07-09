@@ -99,6 +99,12 @@ const userSchema = new mongoose.Schema({
     interests: {
         type: [String],
     },
+    reviews:{
+        type:String,
+    },
+    rating:{
+        type: Number,
+    }
 
 });
 
