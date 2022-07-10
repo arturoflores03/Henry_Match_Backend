@@ -103,6 +103,9 @@ const userSchema = new mongoose.Schema({
     },
     rating:{
         type: Number,
+    },
+    phone:{
+        type:String,
     }
 
 });
