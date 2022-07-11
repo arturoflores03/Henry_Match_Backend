@@ -14,7 +14,7 @@ const sendMail = (req, res) => {
       pass: PASS,
     },
   });
-  const mailOptions = {};
+  let mailOptions = {};
    if (isActive === false) {
     mailOptions = {
       from: "Henry Match ",
