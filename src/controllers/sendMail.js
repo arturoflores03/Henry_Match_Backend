@@ -3,7 +3,7 @@ require("dotenv").config();
 const { USERMAIL, PASS } = process.env;
 
 const sendMail = (req, res) => {
-  const { email, name, age, gender, genderInt, interests } = req.body;
+  const { email, name, isActive, message, matches, premium } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     post: 465,
@@ -14,12 +14,39 @@ const sendMail = (req, res) => {
       pass: PASS,
     },
   });
-  const mailOptions = {
-    from: "Henry Match ",
-    to: email,
-    subject: "Bienvenido a Henry Match",
-    text: `Hola ${name}, bienvenido a Henry Match. Esperamos que disfrutes de nuestra plataforma.`,
-  };
+  if (isActive === false) {
+    const mailOptions = {
+      from: "Henry Match ",
+      to: email,
+      subject: "Cuenta inhabilitada Henry Match",
+      text: `Hola ${name}, tu cuenta ha sido inhabilitada. Por favor, contacta con el administrador para más información.`,
+    };
+  }
+  if (premium === true) {
+    const mailOptions = {
+      from: "Henry Match ",
+      to: email,
+      subject: "Cuenta premium Henry Match",
+      text: `Hola ${name}, tu cuenta ha sido habilitada para uso premium.`,
+    };
+  }
+  if (message !== "") {
+    const mailOptions = {
+      from: "Henry Match ",
+      to: email,
+      subject: "Mensaje Henry Match",
+      text: `Hola ${name}, recibiste un nuevo mensaje`,
+    };
+  }
+  if (matches !== "") {
+    const mailOptions = {
+      from: "Henry Match ",
+      to: email,
+      subject: "Nuevo match Henry Match",
+      text: `Hola ${name}, recibiste un nuevo match`,
+    };
+  }
+
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
       res.status(500).json({ message: error });
