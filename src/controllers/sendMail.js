@@ -22,22 +22,22 @@ const sendMail = (req, res) => {
       text: `Hola ${name}, tu cuenta ha sido inhabilitada. Por favor, contacta con el administrador para más información.`,
     };
   }
-  if (premium === true) {
-    const mailOptions = {
-      from: "Henry Match ",
-      to: email,
-      subject: "Cuenta premium Henry Match",
-      text: `Hola ${name}, tu cuenta ha sido habilitada para uso premium.`,
-    };
-  }
-  if (message !== "") {
-    const mailOptions = {
-      from: "Henry Match ",
-      to: email,
-      subject: "Mensaje Henry Match",
-      text: `Hola ${name}, recibiste un nuevo mensaje`,
-    };
-  }
+//   if (premium === true) {
+//     const mailOptions = {
+//       from: "Henry Match ",
+//       to: email,
+//       subject: "Cuenta premium Henry Match",
+//       text: `Hola ${name}, tu cuenta ha sido habilitada para uso premium.`,
+//     };
+//   }
+//   if (message !== "") {
+//     const mailOptions = {
+//       from: "Henry Match ",
+//       to: email,
+//       subject: "Mensaje Henry Match",
+//       text: `Hola ${name}, recibiste un nuevo mensaje`,
+//     };
+//   }
 //   if (matches.length > 0) {
 //     const mailOptions = {
 //       from: "Henry Match ",
