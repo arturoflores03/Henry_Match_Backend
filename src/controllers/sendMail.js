@@ -39,14 +39,14 @@ const sendMail = (req, res) => {
       text: `Hola ${name}, recibiste un nuevo mensaje`,
     };
   }
-  if (matches.length > 0) {
-    mailOptions = {
-      from: "Henry Match ",
-      to: email,
-      subject: "Nuevo match Henry Match",
-      text: `Hola ${name}, recibiste un nuevo match`,
-    };
-  }
+//   if (matches.length > 0) {
+//     mailOptions = {
+//       from: "Henry Match ",
+//       to: email,
+//       subject: "Nuevo match Henry Match",
+//       text: `Hola ${name}, recibiste un nuevo match`,
+//     };
+//   }
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
