@@ -14,14 +14,14 @@ const sendMail = (req, res) => {
       pass: PASS,
     },
   });
-  if (isActive === false) {
+//   if (isActive === false) {
     const mailOptions = {
       from: "Henry Match ",
       to: email,
       subject: "Cuenta inhabilitada Henry Match",
       text: `Hola ${name}, tu cuenta ha sido inhabilitada. Por favor, contacta con el administrador para más información.`,
     };
-  }
+//   }
 //   if (premium === true) {
 //     const mailOptions = {
 //       from: "Henry Match ",
