@@ -38,7 +38,7 @@ const sendMail = (req, res) => {
       text: `Hola ${name}, recibiste un nuevo mensaje`,
     };
   }
-  if (matches !== "") {
+  if (matches.length > 0) {
     const mailOptions = {
       from: "Henry Match ",
       to: email,
