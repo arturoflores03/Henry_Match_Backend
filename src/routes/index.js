@@ -12,7 +12,9 @@ const { interestsDelete } = require("../controllers/interestsDelete");
 const { userNickname } = require("../controllers/userNickname");
 const { putMatches } = require("../controllers/putMatches");
 const { userUpdate } = require("../controllers/imgUpdate");
-const { sendMail } = require("../controllers/sendMail");
+const { sendMailActive } = require("../controllers/sendMailActive");
+const { sendMailPremium } = require("../controllers/sendMailPremium");
+const { sendMailMessage } = require("../controllers/sendMailMessage");
 
 const router = express.Router();
 
@@ -29,6 +31,8 @@ router.get("/interests/:id", interestsId);
 router.delete("/interests/:id", interestsDelete);
 router.put("/usersMatches/:id", putMatches);
 router.put("/usersImg/:id", userUpdate);
-router.post("/send-mail", sendMail);
+router.post("/send-mail-active", sendMailActive);
+router.post("/send-mail-premium", sendMailPremium);
+router.post("/send-mail-message", sendMailMessage);
 
 module.exports = router;

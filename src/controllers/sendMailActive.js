@@ -2,8 +2,8 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const { USERMAIL, PASS } = process.env;
 
-const sendMail = (req, res) => {
-  const { email, name, age, gender, genderInt, interests } = req.body;
+const sendMailActive = (req, res) => {
+  const { email, name } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     post: 465,
@@ -14,12 +14,15 @@ const sendMail = (req, res) => {
       pass: PASS,
     },
   });
-  const mailOptions = {
+  let mailOptions = {};
+
+  mailOptions = {
     from: "Henry Match ",
     to: email,
-    subject: "Bienvenido a Henry Match",
-    text: `Hola ${name}, bienvenido a Henry Match. Esperamos que disfrutes de nuestra plataforma.`,
+    subject: "Cuenta inhabilitada --------- Henry Match",
+    text: `Hola ${name}, tu cuenta ha sido inhabilitada. Por favor, contacta con el administrador para más información.`,
   };
+
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
       res.status(500).json({ message: error });
@@ -31,5 +34,5 @@ const sendMail = (req, res) => {
 };
 
 module.exports = {
-  sendMail,
+  sendMailActive,
 };
