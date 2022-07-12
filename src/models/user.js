@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
         type: String,       
         
     },
+    premium: {
+        type: Boolean,
+        default: false
+    },
     isAdmin: {
         type: Boolean,
         default: false, 
@@ -32,8 +36,7 @@ const userSchema = new mongoose.Schema({
     },
     role:{
         type: String,
-        enum:["user", "admin", "premium", "banned"],
-        default: "user"
+        default: "default"
     },
     image: {
         type: String,        
@@ -95,6 +98,15 @@ const userSchema = new mongoose.Schema({
     interests: {
         type: [String],
     },
+    reviews:{
+        type:String,
+    },
+    rating:{
+        type: Number,
+    },
+    phone:{
+        type:String,
+    }
 
 });
 
