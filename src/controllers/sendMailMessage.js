@@ -19,8 +19,8 @@ const sendMailMessage = (req, res) => {
   mailOptions = {
     from: "Henry Match ",
     to: email,
-    subject: "Recibiste un nuevo mensaje --------- Henry Match",
-    text: `Hola ${name}, recibiste un nuevo mensaje en Henry Match. Por favor, no dejes de responder para que podamos seguir comunicándonos.`,
+    subject: "Tu cuenta se encuentra nuevamente habilitada --------- Henry Match",
+    text: `Hola ${name}, estamos muy contentos de informarte que tu cuenta ha sido habilitada para que puedas volver a disfrutar de Henry Match.`,
   };
 
   transporter.sendMail(mailOptions, (error, data) => {
